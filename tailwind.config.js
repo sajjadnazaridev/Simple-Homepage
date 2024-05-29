@@ -13,7 +13,7 @@ export default {
         colorSecondaryAccent: '#4CA154',
       },
       fontFamily: {
-        DMSans: ["DM Sans", "sans-serif"],
+        DMSans: ["Sora", "sans-serif"],
       },
     },
     screens: {
@@ -22,5 +22,6 @@ export default {
       lg: "1280px",
     },
   },
+  darkMode: 'class',
   plugins: [],
 }
