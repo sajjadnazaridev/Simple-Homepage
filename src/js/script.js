@@ -5,6 +5,7 @@ const mainIconTag = document.getElementById('main-btn-switch');
 const logoHeader = document.getElementById('logoHeader');
 const icoMenu = document.getElementById('ico-menu');
 const navLink = document.getElementById('navLink');
+const menuNav = document.getElementById('menuNav');
 
 let statusTheme = 'light';
 
@@ -38,10 +39,12 @@ icoMenu.addEventListener('click', () => {
     if (icoMenu.classList.contains('ri-menu-5-line')) {
         icoMenu.classList.remove('ri-menu-5-line');
         icoMenu.classList.add('ri-close-large-line');
-        navLink.classList.replace('hidden','flex');
+        navLink.classList.replace('hidden', 'flex');
+        menuNav.classList.add('fixed');
     } else {
         icoMenu.classList.remove('ri-close-large-line');
         icoMenu.classList.add('ri-menu-5-line');
-        navLink.classList.replace('flex','hidden');
+        navLink.classList.replace('flex', 'hidden');
+        menuNav.classList.remove('fixed');
     }
 });
