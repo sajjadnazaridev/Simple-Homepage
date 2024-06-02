@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Responsive Web Developer Starter - devchallenges.io</title>
     <link
       rel="icon"
@@ -16,8 +20,10 @@
   <body
     class="bg-colorLightSecondary text-colorDarkPrimary dark:bg-colorDarkBackground"
   >
-    <div class="container px-20">
-      <header class="flex justify-between items-center p-5">
+    <div class="container px-20 my-0 mx-auto max-md:px-0 max-sm:px-5 max-md:w-fit">
+      <header
+        class="flex justify-between items-center w-full p-5 max-md:p-0 max-md:pt-5"
+      >
         <div class="section-logo">
           <img
             src="./images/alarado-icon-homepage.svg"
@@ -26,30 +32,87 @@
           />
         </div>
         <div class="section-menue w-1/2 text-colorDarkSecondary font-medium">
-          <ul class="unordered-list flex justify-between items-center">
-            <li
-              class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+          <div class="max-sm:hidden">
+            <ul
+              class="unordered-list flex justify-between items-center max-md:text-sm"
             >
-              <a href="#">About us</a>
-            </li>
-            <li
-              class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">About us</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Product</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Resource</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="sm:hidden hidden flex-col items-center fixed bg-colorLightBackground min-h-[60vh] right-0 top-0 w-3/5 h-full dark:bg-colorDarkBackground shadow-md duration-500 dark:shadow-colorPrimaryAccent" id="navLink"
+          >
+            <ul
+              class="unordered-list flex flex-col justify-between items-center gap-[4vw] text-2xl pt-10 mb-10"
             >
-              <a href="#">Product</a>
-            </li>
-            <li
-              class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
-            >
-              <a href="#">Resource</a>
-            </li>
-            <li
-              class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
-            >
-              <a href="#">Contact</a>
-            </li>
-          </ul>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">About us</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Product</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Resource</a>
+              </li>
+              <li
+                class="hover:text-colorDarkPrimary dark:hover:text-colorLightSecondary"
+              >
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+            <div class="section-switch-them">
+              <label class="switch">
+                <input type="checkbox" checked id="switchThemeCheckBox" />
+                <span class="slider round">
+                  <img
+                    src="./images/Moon_fill_light.svg"
+                    class="w-[1.25rem] h-[1.5rem] ml-[2px]"
+                    alt="moon fill"
+                  />
+                  <span>
+                    <img
+                      src="./images/Sun_fill.svg"
+                      alt="main icon switch"
+                      id="main-btn-switch"
+                    />
+                  </span>
+                  <img
+                    src="./images/Sun_fill_light.svg"
+                    class="w-[1.25rem] h-[1.5rem] ml-[7px]"
+                    alt="sun fill"
+                  />
+                </span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="section-switch-them">
+        <div class="section-switch-them max-sm:hidden">
           <label class="switch">
             <input type="checkbox" checked id="switchThemeCheckBox" />
             <span class="slider round">
@@ -73,10 +136,19 @@
             </span>
           </label>
         </div>
+        <div class="menu-nav fixed top-[3%] right-[4%] z-50">
+          <i
+            class="ri-menu-5-line hover:cursor-pointer text-xl sm:hidden dark:text-colorLightSecondary"
+            id="ico-menu"
+            name="menu"
+          ></i>
+        </div>
       </header>
 
-      <div class="slider-container flex h-[90dvh] pt-16">
-        <div class="section-left h-full w-1/2 text-left">
+      <div
+        class="slider-container flex h-[90dvh] pt-16 max-md:flex-col-reverse max-md:h-full"
+      >
+        <div class="section-left h-full w-1/2 text-left max-md:w-full">
           <div class="container-content">
             <h6
               class="subtitle font-medium mb-4 uppercase text-colorDarkPrimary dark:text-colorLightSecondary"
@@ -85,15 +157,15 @@
             </h6>
 
             <h1
-              class="maintitle font-bold text-colorDarkPrimary text-7xl leading-snug mb-9 dark:text-colorLightSecondary"
+              class="maintitle font-bold text-colorDarkPrimary text-7xl leading-snug mb-9 dark:text-colorLightSecondary max-md:text-5xl"
             >
-              Actions for <br />
+              Actions for <br class="max-md:hidden" />
               Accessibility <br />
               in Design
             </h1>
 
             <p
-              class="description text-colorDarkSecondary font-medium text-2xl mb-4"
+              class="description text-colorDarkSecondary font-medium text-2xl mb-4 max-md:text-xl"
             >
               The fastest way to build and deploy websites with resusable
               components.
@@ -136,7 +208,7 @@
           </div>
         </div>
 
-        <div class="section-right h-full w-1/2 text-right">
+        <div class="section-right h-full w-1/2 text-right max-md:w-full">
           <div class="container-img h-full w-full">
             <img src="./images/hero-image-simple-homepage.png" alt="" />
           </div>
